@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Wildfire Tracker:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React app that displays active wildfires from the last thirty days on a Google Map, driven by NASA's EONET API. To see information about a given wildfire, the user clicks on an icon/marker.
 
-## Available Scripts
+Created by following Traversy Media's Wildfire Tracker tutorial on YouTube.
 
-In the project directory, you can run:
+## Setup:
 
-### `npm start`
+1. Clone the repo and install dependencies:
+```
+   npm install
+```
+2. Copy `.env.example` to `.env.local` and add your own Google Maps API key:
+```
+   cp .env.example .env.local
+```
+3. Start the app:
+```
+   npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The app is run through http://localhost:3000.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Changes made from the tutorial:
 
-### `npm test`
+- Used `@vis.gl/react-google-maps` instead of `google-map-react` due to it being outdated, which eventually caused a bug where the markers would drift as the map moved.
+- Updated the code to only show open events from the past thirty days, instead of including old wildfires that NASA still lists as open.
+- Used default parameters instead of `defaultProps`, as the tutorial used an outdated version of React that wasn't compatible with the current version.
+- Placed each marker at the wildfire's most recent position, as opposed to the original position.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Tech:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+JavaScript, React, NASA EONET API, Google Maps JavaScript API, `@vis.gl/react-google-maps`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Credit:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Based on the Wildfire Tracker tutorial by Traversy Media.
