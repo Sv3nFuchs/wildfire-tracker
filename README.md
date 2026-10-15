@@ -21,6 +21,10 @@ Created by following Traversy Media's Wildfire Tracker tutorial on YouTube.
 
 The app is run through http://localhost:3000.
 
+## Example:
+
+<img width="1470" height="956" alt="Skärmavbild 2026-10-15 kl  13 38 13" src="https://github.com/user-attachments/assets/40747cd4-de2d-449c-a941-9fbc825471c7" />
+
 ## Changes made from the tutorial:
 
 - Used `@vis.gl/react-google-maps` instead of `google-map-react` due to it being outdated, which eventually caused a bug where the markers would drift as the map moved.
